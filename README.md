@@ -43,13 +43,15 @@ See [architecture.md](architecture.md) for detailed diagrams.
 
 ## Results - IMDB Sentiment Classification
 
-| Model | Accuracy | Parameters |
-|-------|----------|------------|
-| TinyBERT (From Scratch) | 75.20% | ~12M |
-| DistilBERT | ~90%+ | 66M |
-| BERT-base | ~90%+ | 110M |
+| Model | Accuracy | Parameters | Notes |
+|-------|----------|------------|-------|
+| TinyBERT (From Scratch) | 75.20% | ~12M | Verified, 3 epochs training |
+| DistilBERT | ~90%+ | 66M | Expected (pretrained + fine-tuned) |
+| BERT-base | ~90%+ | 110M | Expected (pretrained + fine-tuned) |
 
 **Training Progress:** Epoch 1: 70.65% → Epoch 2: 72.95% → Epoch 3: 75.20% (loss: 0.56 → 0.50)
+
+*Note: HF model comparisons require fine-tuning on IMDB. The numbers shown are expected performance based on literature. Use `--mode compare` to benchmark after fine-tuning.*
 
 ## License
 
